@@ -1,6 +1,16 @@
 import React from 'react';
 import me from './assets/kevin-vietnam-hanging-plant.jpg';
 import Image from 'next/image';
+import Link from 'next/link';
+
+/*
+import Link from 'next/link'
+ 
+documentation for linking
+export default function Page() {
+  return <Link href="/dashboard">Dashboard</Link>
+}
+*/
 
 const Title = () => (
   <div className="text-4xl font-bold text-blue-300">Kevin Leary</div>
@@ -33,29 +43,39 @@ const ProjectsIcon = ({className}: {className?: string}) => (
 );
 
 const ProjectsButton = () => (
-  <div className="flex justify-center mt-4">
-    <button
-      className="bg-blue-700 hover:bg-blue-600 w-32 text-white font-bold   border-0 outline-none focus:outline-none rounded-full text-lg ml-4 flex justify-center items-center h-10"
-      data-testid="enter-button">
-      <ProjectsIcon className="inline-block w-6 h-6 mr-2" />
-      Projects
-    </button>
+  <div className="flex justify-center">
+    <Link href="projects">
+      <button
+        className="bg-blue-700 hover:bg-blue-600 w-32 text-white font-bold   border-0 outline-none focus:outline-none rounded-full text-lg ml-4 flex justify-center items-center py-2"
+        data-testid="enter-button">
+        <ProjectsIcon className="inline-block w-6 h-6 mr-2" />
+        Projects
+      </button>
+    </Link>
   </div>
 );
 
 const CodeButton = () => (
-  <div className="flex justify-center mt-4">
-    <button
-      className="bg-neutral-700 hover:bg-neutral-600 w-32 text-white font-bold  border-0 outline-none focus:outline-none rounded-full text-lg ml-4 flex justify-center items-center h-10"
-      data-testid="enter-button">
-      <GitHubButton className="inline-block w-6 h-6 mr-2" />
-      Code
-    </button>
+  <div className="flex justify-center">
+    <Link href="code">
+      <button
+        className="bg-neutral-700 hover:bg-neutral-600 w-32 text-white font-bold  border-0 outline-none focus:outline-none rounded-full text-lg ml-4 flex justify-center items-center py-2"
+        data-testid="enter-button">
+        <GitHubButton className="inline-block w-6 h-6 mr-2" />
+        Code
+      </button>
+    </Link>
   </div>
 );
 
-const ButtonRow = props => (
-  <div className="flex justify-center mt-4 align-middle text-center align-center flex-row items-center h-12">
+interface ButtonRowProps {
+  children: React.ReactNode;
+}
+
+const ButtonRow = (props: ButtonRowProps) => (
+  <div
+    className="flex justify-center mt-12  flex-row items-center 
+  ">
     {props.children}
   </div>
 );
@@ -66,9 +86,7 @@ const MeImage = () => (
       <Image
         src={me}
         alt="Picture of the author"
-        layout="responsive"
-        width="100"
-        height="100"
+        sizes="(max-width: 768px) 200px, (max-width: 1200px) 200px, 33vw"
       />
     </div>
   </div>
@@ -76,7 +94,7 @@ const MeImage = () => (
 
 const Home = () => (
   <>
-    <div className="mt-18 text-white text-opacity-87 mt-24 tracking-tighter text-center px-4">
+    <div className="mt-18 text-white text-opacity-87 mt-12 tracking-tighter text-center px-4">
       <MeImage />
       <Title />
       <SubTitle />
