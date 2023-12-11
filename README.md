@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ktleary.com - Personal Website
 
-## Getting Started
+This is the repository for my personal website, ktleary.com, where I showcase my software development work and provide contact information. This website serves as a portfolio and a point of contact for anyone interested in my professional endeavors.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a dynamic web application built using Next.js, React.js, and styled with Tailwind CSS. It showcases my software development projects and provides a way to reach out to me for potential collaborations or inquiries.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![ktleary.com screen](ktleary-com.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **SEO-friendly**: Utilizes Next.js for improved SEO and performance.
+- **Blog Section**: Includes a blog section to share articles and insights.
+- **Responsive Design**: Built with a responsive design for a seamless experience on various devices.
+- **Contact Form**: Provides a contact form for easy communication.
+- **Portfolio Showcase**: Showcases my software development projects and skills.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To run this website locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone this repository to your local machine:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/yourusername/ktleary-next.git
+   ```
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to explore my website at ktleary.com. You can view my software development projects, learn more about my background, and find my contact information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the GPL-3.0-or-later License.
+
+## Contact
+
+Kevin Leary
+
+- Email: kevin@ktleary.com
+- GitHub: ktleary
+- SourceHut: git.sr.ht/~djlooop
+
+Feel free to reach out if you have any questions, feedback, or collaboration opportunities.
+
+Thank you for visiting my personal website!
