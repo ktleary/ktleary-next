@@ -54,7 +54,6 @@ const TopNav = () => {
           Blog
         </Link>
       </div>
-      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-12 right-4  shadow-md w-40 p-2 space-y-2 bg-white dark:bg-slate-800">
           <Link
