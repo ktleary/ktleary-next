@@ -2,11 +2,11 @@
 
 This is the repository for my personal website, ktleary.com, where I showcase my software development work and provide contact information. This website serves as a portfolio and a point of contact for anyone interested in my professional endeavors.
 
+View the live website at [ktleary.com](https://ktleary.com).
+
 ## Description
 
 This project is a dynamic web application built using Next.js, React.js, and styled with Tailwind CSS. It showcases my software development projects and provides a way to reach out to me for potential collaborations or inquiries.
-
-![ktleary.com screen](ktleary-com.png)
 
 ## Features
 
