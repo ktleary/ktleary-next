@@ -1,17 +1,7 @@
+import Link from 'next/link';
+import Project from './components/Project';
 import {projectData} from './project-data';
-import AppIcons from './app-icons/AppIcons';
-import {ProjectDetails} from './project-data';
-import {LabelIos, LabelWeb, LabelOpenFin, LabelOpenSource} from './labels';
 
-// const GenericLinkIcon = styled(GenericLinkButton)`
-//   color: transparent;
-//   fill: rgba(255, 255, 255, 0.78);
-//   height: 20px;
-//   width: 20px;
-//   &:hover {
-//     fill: rgba(255, 255, 255, 1);
-//   }
-// `;
 
 const GenericLinkIcon = ({className}: {className?: string}) => (
   <svg
@@ -23,145 +13,45 @@ const GenericLinkIcon = ({className}: {className?: string}) => (
   </svg>
 );
 
-// const SourceHutIcon = styled(SourceHutButton)`
-//   color: rgba(255, 255, 255, 0.78);
-//   height: 18px;
-//   width: 18px;
-//   &:hover {
-//     color: rgba(255, 255, 255, 1);
-//   }
-// `;
+/*
+===
+- example for how we will link dynamically to the project page
+- we have setup a folder called [project] in the projects folder (current folder)
+pwd && ls -la
+/Users/kleary/Documents/dev/explore/ktleary-next/app/projects
+drwxr-xr-x     - kleary 10 Dec 23:43 [project] // <-- this is the dynamic route folder
+drwxr-xr-x@    - kleary 10 Dec 16:31 app-icons
+drwxr-xr-x     - kleary 10 Dec 14:08 assets
+.rw-r--r--@ 4.9k kleary 10 Dec 14:13 buttons.tsx
+drwxr-xr-x     - kleary 10 Dec 23:23 components
+.rw-r--r--@  613 kleary 10 Dec 15:11 labels.tsx
+.rw-r--r--  1.0k kleary 10 Dec 17:40 page.tsx
+.rw-r--r--   11k kleary 10 Dec 17:33 project-data.ts
+===
 
-// const GitHubIcon = styled(GitHubButton)`
-//   color: rgba(255, 255, 255, 0.66);
-//   height: 18px;
-//   width: 18px;
-// `;
-
-// const ProjectsContainer = styled.div`
-//   background: #212121;
-// `;
-// const ProjectsSection = styled.h2`
-//   color: rgba(255, 255, 255, 0.78);
-//   font-size: 24px;
-//   font-weight: normal;
-//   margin: 0 0 32px 0;
-//   padding: 16px 0 0 0;
-//   text-align: center;
-// `;
-
-// const ProjectDetails = styled.div`
-//   display: flex;
-//   margin: 8px;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   @media (max-width: 444px) {
-//     justify-content: center;
-//   }
-//   padding-bottom: 24px;
-//   background: #212121;
-// `;
-
-// const ProjectTitle = styled.h3`
-//   align-items: center;
-//   color: rgba(255, 255, 255, 0.87);
-//   font-size: 24px;
-//   @media (max-width: 444px) {
-//     font-size: 20px;
-//   }
-//   font-weight: 700;
-//   display: flex;
-//   margin: 0;
-//   padding-left: 16px;
-
-//   letter-spacing: -0.3px;
-// `;
-
-// const ProjectDescription = styled.div`
-//   font-size: 16px;
-//   height: 100%;
-//   margin: 0 0;
-//   padding: 0 16px;
-//   line-height: 1.25;
-//   letter-spacing: -0.15px;
-//   margin-top: 4px;
-// `;
-
-// // eslint-disable-next-line no-unused-vars
-// const ProjectLinks = styled.div`
-//   align-items: center;
-//   display: flex;
-//   margin: 0;
-//   padding: 4px 16px;
-// `;
-
-// const LinkContainer = styled.div`
-//   cursor: pointer;
-//   margin-right: 8px;
-//   text-decoration: none;
-// `;
-
-// const ProjectIconWrapper = styled.div`
-//   align-items: center;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   margin-right: 8px;
-//   width: 128px;
-//   min-width: 88px;
-//   background: #212121;
-// `;
-
-// const ProjectContentWrapper = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   width: 100%;
-// `;
-
-// const LabelRow = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: flex-start;
-//   margin: 0;
-//   padding: 8px;
-//   align-items: center;
-//   margin-top: 4px;
-//   padding-left: 16px;
-// `;
-
-const Project = (projectDetails: ProjectDetails) => {
-  const {name, description, ios, web, openfin, opensource} = projectDetails;
-
+export default function PostList({ posts }) {
   return (
-    <div className="rounded-xl border border-gray-800 bg-gray-900 flex flex-col justify-center items-center p-4 m-4">
-      <div className="flex flex-col justify-center items-center rounded-xl border border-gray-800 bg-gray-900 p-4 m-4">
-        {AppIcons[name]}
-      </div>
-      <div className="flex flex-col justify-center items-center">
-        <div className="text-white text-center text-2xl font-bold">{name}</div>
-        <div className="text-white text-center text-lg font-normal">
-          {description}
-        </div>
-        <div className="flex flex-row justify-start items-center mt-2 pl-4">
-          {ios && <LabelIos />}
-          {web && <LabelWeb />}
-          {openfin && <LabelOpenFin />}
-          {opensource && <LabelOpenSource />}
-        </div>
-      </div>
-    </div>
-  );
-};
+    <ul>
+      {posts.map((post) => (
+        <li key={post.id}>
+          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+*/
 
 const Projects = () => (
-  <div className="bg-gray-900">
+  <div className="bg-slate-800">
     <div className="text-white text-center text-4xl font-bold p-4">
-      Apps built with ❤️
+      Projects built with ❤️
     </div>
     <div className="flex flex-row justify-center items-center flex-wrap">
       {projectData.map(project => (
-        <Project {...project} key={project.name} />
+        <Link href={`/projects/${project.shortname}`} key={project.name}>
+          <Project {...project} key={project.name} />
+        </Link>
       ))}
     </div>
   </div>

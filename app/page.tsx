@@ -3,22 +3,13 @@ import me from './assets/kevin-vietnam-hanging-plant.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 
-/*
-import Link from 'next/link'
- 
-documentation for linking
-export default function Page() {
-  return <Link href="/dashboard">Dashboard</Link>
-}
-*/
-
 const Title = () => (
   <div className="text-4xl font-bold text-blue-300">Kevin Leary</div>
 );
 
 const SubTitle = () => (
-  <div className="mt-6 text-2xl font-bold text-slate-500 dark:text-white">
-    Software Developer and Open Source Enthusiast
+  <div className="mt-4 text-2xl font-bold text-slate-500 dark:text-white">
+    Software Developer
   </div>
 );
 
@@ -74,7 +65,7 @@ interface ButtonRowProps {
 
 const ButtonRow = (props: ButtonRowProps) => (
   <div
-    className="flex justify-center mt-12  flex-row items-center 
+    className="flex justify-center mt-8  flex-row items-center 
   ">
     {props.children}
   </div>
@@ -82,7 +73,7 @@ const ButtonRow = (props: ButtonRowProps) => (
 
 const MeImage = () => (
   <div className="flex justify-center mt-4">
-    <div className="rounded-full overflow-hidden  h-40 w-40 mb-4">
+    <div className="rounded-full overflow-hidden  h-40 w-40 mb-6">
       <Image
         src={me}
         alt="Picture of the author"
@@ -94,15 +85,15 @@ const MeImage = () => (
 
 const Home = () => (
   <>
-    <div className="mt-18 text-white text-opacity-87 mt-12 tracking-tighter text-center px-4">
+    <div className="mt-18 text-white text-opacity-87 mt-12 tracking-tighter text-center px-4 h-screen flex flex-col  ">
       <MeImage />
       <Title />
       <SubTitle />
+      <ButtonRow>
+        <ProjectsButton />
+        <CodeButton />
+      </ButtonRow>
     </div>
-    <ButtonRow>
-      <ProjectsButton />
-      <CodeButton />
-    </ButtonRow>
   </>
 );
 

@@ -17,8 +17,8 @@ import Image from 'next/image';
 // convert the styled component to tailwindcss
 
 const Red4UIcon = () => (
-  <div className="flex flex-col justify-center items-center rounded-md bg-red-500 h-72 w-72 min-h-72 min-w-72 border-0">
-    <Image src={letteru} alt="duck" />
+  <div className="flex flex-col justify-center items-center rounded-md bg-red-500 h-16 w-16">
+    <Image src={letteru} alt="duck" width={40} height={40} />
   </div>
 );
 

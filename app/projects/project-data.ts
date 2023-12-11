@@ -24,7 +24,7 @@ import tailspinQuery from './assets/tailspin/tailspin-query.png';
 import tailspinResults from './assets/tailspin/tailspin-results.png';
 import {StaticImageData} from 'next/image';
 
-interface Screenshot {
+export interface Screenshot {
   src: string | StaticImageData;
   alt: string;
   caption: string;
@@ -34,6 +34,7 @@ interface Screenshot {
 
 export interface ProjectDetails {
   name: string;
+  shortname?: string;
   description: string;
   content: string;
   repoUrl: string | null;
@@ -43,11 +44,13 @@ export interface ProjectDetails {
   openfin: boolean;
   opensource: boolean;
   screenshots: Screenshot[];
+  link?: string;
 }
 
 export const projectData: ProjectDetails[] = [
   {
     name: 'Mor Life',
+    shortname: 'mor',
     description: 'Discover events with friends.',
     content:
       'Mor Life is a social event creation and discovery app that allows users to create events and invite friends. Users can also share events on social media apps such as WhatsApp.\n\nThe app features a day view, a library of events, and a social profile to display a gallery of events.\n\nUsers can find and follow friends, and view their events in a social feed.\n\nThe app was built with React Native, and is currently available on the web and as an iOS app on TestFlight.',
@@ -57,6 +60,7 @@ export const projectData: ProjectDetails[] = [
     web: true,
     openfin: false,
     opensource: false,
+    link: '/projects/mor',
     screenshots: [
       {
         src: homescreen,
