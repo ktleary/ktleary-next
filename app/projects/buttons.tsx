@@ -1,6 +1,4 @@
-import Icon from './Icon';
-
-const BackButton = ({className}) => (
+const BackButton = ({className}: {className?: string}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 -960 960 960"
@@ -12,8 +10,8 @@ const BackButton = ({className}) => (
   </svg>
 );
 
-const CopyButton = ({className}) => (
-  <svg title="Copy" viewBox="0 0 24 24" className={className}>
+const CopyButton = ({className}: {className?: string}) => (
+  <svg viewBox="0 0 24 24" className={className}>
     <path d="M0 0h24v24H0z" fill="transparent" />
     <path
       fill="currentColor"
@@ -24,8 +22,8 @@ const CopyButton = ({className}) => (
 
 export default CopyButton;
 
-const EmailButton = ({className}) => (
-  <svg viewBox="0 0 24 24" className={className} title="AngelList">
+const EmailButton = ({className}: {className?: string}) => (
+  <svg viewBox="0 0 24 24" className={className}>
     <path d="M0 0h24v24H0z" fill="none" />
     <path
       fill="currentColor"
@@ -34,30 +32,25 @@ const EmailButton = ({className}) => (
   </svg>
 );
 
-const AngelListButton = ({className}) => (
-  <svg title="AngelListButton" viewBox="0 0 21.9 31.4" className={className}>
+const AngelListButton = ({className}: {className?: string}) => (
+  <svg viewBox="0 0 21.9 31.4" className={className}>
     <path
       fill="currentColor"
       d="M18.3 13.4c1.3.2 2.2.8 2.7 1.6s.8 2.2.8 4c0 3.6-1.1 6.6-3.3 8.9-2.2 2.3-5 3.5-8.4 3.5-1.3 0-2.6-.2-3.9-.7-1.3-.5-2.3-1.2-3.2-2-1-.9-1.8-2-2.3-3-.4-1.1-.7-2.2-.7-3.3 0-1.2.3-2.2.8-2.9.5-.7 1.4-1.1 2.5-1.4-.2-.5-.4-.9-.5-1.3-.1-.3-.2-.6-.2-.8 0-.6.3-1.3 1-2s1.3-1 1.9-1c.3 0 .5 0 .8.1.3.1.6.2 1 .5-.9-3-1.8-5.5-2.3-7.2-.5-1.7-.7-2.8-.7-3.5 0-.9.2-1.6.7-2.1C5.4.3 6.1 0 6.9 0c1.3 0 3 3 5.1 9.1.4 1 .6 1.8.8 2.4.2-.4.4-1.1.7-1.9 2.1-6 3.9-9 5.3-9 .7 0 1.3.2 1.8.7.4.5.7 1.2.7 2 0 .6-.2 1.8-.7 3.5-.6 1.7-1.3 3.9-2.3 6.6zM2.9 22.2c.2.2.5.6.8 1.1.9 1.3 1.8 2 2.6 2 .3 0 .5-.1.7-.3.2-.2.3-.4.3-.5 0-.2-.1-.6-.4-1.1-.3-.5-.7-1.1-1.2-1.7-.6-.7-1.1-1.3-1.4-1.6-.4-.3-.7-.5-.9-.5-.5 0-1 .3-1.4.8-.4.5-.6 1.2-.6 1.9 0 .6.1 1.2.4 2 .3.7.7 1.5 1.3 2.2.9 1 1.9 1.9 3.2 2.5 1.3.6 2.6.9 4.2.9 2.8 0 5.1-1 7-3.1 1.9-2.1 2.8-4.7 2.8-7.9 0-1-.1-1.7-.2-2.3-.1-.6-.4-1-.7-1.2-.6-.5-1.7-.9-3.4-1.3s-3.5-.6-5.3-.6c-.5 0-.9.1-1.1.3-.2.2-.3.5-.3.9 0 1 .5 1.7 1.6 2.1 1.1.4 2.9.7 5.3.7h.9c.2 0 .4.1.5.2.1.2.2.4.2.7-.2.2-.7.5-1.5.8-.8.3-1.3.6-1.7.9-.9.6-1.6 1.4-2.1 2.3-.5.9-.8 1.7-.8 2.5 0 .5.1 1 .3 1.7.2.7.3 1.1.3 1.2v.4c-.6 0-1.1-.4-1.5-1.1-.4-.7-.5-1.6-.5-2.8v-.2c-.1.1-.2.2-.3.2-.1 0-.2.1-.4.1h-.4c-.1 0-.2-.1-.4-.1 0 .2.1.3.1.5v.4c0 .5-.2 1-.6 1.4-.4.4-.9.6-1.5.6-.9 0-1.8-.4-2.8-1.3-.9-.9-1.4-1.7-1.4-2.6 0-.2 0-.3.1-.4 0-.5.1-.6.2-.7zm6.5.5c.2 0 .5-.1.7-.3.2-.2.3-.5.3-.7 0-.3-.2-.9-.6-1.9-.4-1-.9-2-1.5-2.9-.4-.7-.9-1.3-1.3-1.6-.4-.4-.8-.5-1.2-.5-.3 0-.6.2-1 .6-.4.4-.5.7-.5 1.1 0 .3.2.9.5 1.6.4.7.8 1.4 1.4 2.2.6.8 1.2 1.5 1.8 2 .6.2 1 .4 1.4.4zm2.1-10.4L9.1 5.6c-.6-1.7-1-2.9-1.4-3.4-.3-.5-.6-.8-1-.8-.3 0-.5.1-.7.3-.3.3-.4.6-.4 1 0 .7.3 1.8.8 3.4.5 1.6 1.3 3.8 2.3 6.4.1-.2.2-.3.4-.3.2-.1.4-.1.6-.1h.5c.3.1.7.1 1.3.2zm2.4 6.5c-.6 0-1.2-.1-1.8-.2-.6-.1-1.1-.2-1.6-.4.2.5.4.9.6 1.4.2.5.3.9.4 1.4.3-.4.7-.8 1.1-1.2.5-.4.9-.7 1.3-1zm2.9-5.8c1-2.6 1.7-4.8 2.3-6.5.5-1.7.8-2.7.8-3.1 0-.4-.1-.7-.3-1-.2-.2-.4-.3-.7-.3-.4 0-.8.3-1.2 1-.4.7-.9 1.7-1.4 3.2l-2.2 6.2 2.7.5z"></path>
   </svg>
 );
 
-const GitHubButton = ({className}) => (
-  <svg
-    data-testid="button-github"
-    title="GitHub"
-    viewBox="0 0 16 16"
-    className={className}>
+const GitHubButton = ({className}: {className?: string}) => (
+  <svg data-testid="button-github" viewBox="0 0 16 16" className={className}>
     <path
       fill="currentColor"
       d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
   </svg>
 );
 
-const SourceHutButton = ({className}) => (
+const SourceHutButton = ({className}: {className?: string}) => (
   <svg
     data-testid="button-sourcehut"
-    title="SourceHut"
     viewBox="0 0 512 512"
     className={className}>
     <path
@@ -65,10 +58,9 @@ const SourceHutButton = ({className}) => (
       d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path>
   </svg>
 );
-const GenericLinkButton = ({className}) => (
+const GenericLinkButton = ({className}: {className?: string}) => (
   <svg
     data-testid="button-genericlink"
-    title="Link"
     viewBox="0 0 24 24"
     className={className}>
     <path d="M0 0h24v24H0z" fill="currentColor" />

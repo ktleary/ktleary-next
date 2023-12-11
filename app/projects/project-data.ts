@@ -52,8 +52,22 @@ export const projectData: ProjectDetails[] = [
     name: 'Mor Life',
     shortname: 'mor',
     description: 'Discover events with friends.',
-    content:
-      'Mor Life is a social event creation and discovery app that allows users to create events and invite friends. Users can also share events on social media apps such as WhatsApp.\n\nThe app features a day view, a library of events, and a social profile to display a gallery of events.\n\nUsers can find and follow friends, and view their events in a social feed.\n\nThe app was built with React Native, and is currently available on the web and as an iOS app on TestFlight.',
+    content: `
+      Mor Life: Connecting You to the Events You Love
+      Discover and create exciting events with Mor Life, your go-to social calendar platform. Easily plan and organize gatherings with friends, and share them through popular social media channels like WhatsApp.
+     
+      Mor Life offers a seamless user experience:
+     
+      • Explore: Browse a comprehensive day view and event library, keeping you informed of upcoming happenings.\n\n
+
+      • Organize: Create and manage your own events, inviting friends and sharing details with ease.\n\n
+      • Connect: Find and follow friends, viewing their events in a personalized social feed.\n\n
+      • Showcase: Build your social profile with a gallery of events, highlighting your involvement and interests.
+      • Accessible: Experience Mor Life on the web and through the iOS app available on TestFlight.
+      
+      Built with React Native, Mor Life delivers a smooth and intuitive interface for managing your social calendar and connecting with friends through shared experiences.
+     
+      Start planning your next adventure today with Mor Life!`,
     repoUrl: null,
     siteUrl: null,
     ios: true,
@@ -95,6 +109,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'SeatGeek',
+    shortname: 'seatgeek',
     description: 'Homescreen and Listings (2019)',
     content:
       'In 2019, I worked on the SeatGeek web app as a frontend engineer and implemented the home page redesign and and enhanced the ticket listing page with structured data and SEO improvements.',
@@ -123,6 +138,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'Alerter',
+    shortname: 'alerter',
     description: 'Real-time price alerts for bond traders.',
     content:
       'Alerter was built with Angular, WebSockets and OpenFin, a secure wrapper for Chromium used in financial services. The app is used by bond traders at a top capital markets bank to receive real-time price alerts for bonds they are trading, enabling faster execution and better pricing.',
@@ -144,6 +160,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'United Health',
+    shortname: 'unitedhealth',
     description: "UnitedHealth's AARP Medicare app.",
     content:
       "UnitedHealth engaged Optum's web development team to build a mobile web app for AARP Medicare plans. The app was built with an Angular frontend and a Java backend.",
@@ -172,6 +189,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'Squeebles',
+    shortname: 'squeebles',
     description: 'A viral video site created for Cogo Labs.',
     content:
       'Squeebles was a viral video site created for Cogo Labs to encourage users to like and share videos on Facebook. Facebook Graph API was used to track likes and shares as well as gather emails from interested users.',
@@ -200,6 +218,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'Tailspin',
+    shortname: 'tailspin',
     description: 'Interactive AI Story Generator.',
     content:
       "Tailspin is an interactive AI story generator that uses OpenAI's GPT-3.5-instruct. Users create a prompt by pressing on story elements to change the story. A prompt is generated from the user's selections and sent to the backend to generate a story. The story is then displayed to the user.\n\nThe frontend is built with React and the backend is built with Express.",
@@ -215,26 +234,27 @@ export const projectData: ProjectDetails[] = [
         alt: 'Tailspin',
         caption: 'Tailspin',
         title: 'Tailspin Home',
-        imageType: 'desktop',
+        imageType: 'mobile',
       },
       {
         src: tailspinQuery,
         alt: 'Tailspin',
         caption: 'Tailspin',
         title: 'Tailspin Query',
-        imageType: 'desktop',
+        imageType: 'mobile',
       },
       {
         src: tailspinResults,
         alt: 'Tailspin',
         caption: 'Tailspin',
         title: 'Tailspin Results',
-        imageType: 'desktop',
+        imageType: 'mobile',
       },
     ],
   },
   {
     name: 'twit2nit',
+    shortname: 'twit2nit',
     description: 'View Twitter links on a live Nitter instance.',
     content:
       'twit2nit works by querying a list of Nitter instances to determine which are live. Users can enter a Twitter (X) username or link, and twit2nit will redirect to a live Nitter instance.\n\nThe frontend is built with React and the backend is built with Express.',
@@ -270,6 +290,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'invidi.link',
+    shortname: 'invidilink',
     description: 'View YouTube links on a live Invidious instance.',
     content: `invidi.link works by retrieving a list of healthy Invidious instances from invidios.io. Users can enter a YouTube url, and invidi.link will redirect to a live Invidious instance.\n\nThe frontend is built with React and the backend is built with Express.`,
     repoUrl: 'https://github.com/ktleary/invidi.link',
@@ -304,6 +325,7 @@ export const projectData: ProjectDetails[] = [
   },
   {
     name: 'red4u',
+    shortname: 'red4u',
     description: 'View reddit links on libreddit or teddit.',
     content:
       'red4u works by querying a list of libreddit or teddit instances to determine which are live. Users can enter a reddit username or link, and red4u will redirect to a live libreddit or teddit instance.\n\nThe frontend is built with React and the backend is built with Express.',

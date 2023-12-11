@@ -39,10 +39,11 @@ const ViewOnGithubButton = ({url, fill}: {url: string; fill: string}) => {
     <Link
       href={url}
       target="_blank"
+      className="text-white rounded-xl border border-gray-500 p-2 m-4 w-fit flex flex-row justify-center items-center"
       rel="noopener noreferrer"
       aria-label="View on Web">
-      <GitHubButton className={fill} />
-      GitHub
+      <GitHubButton className="w-6" />
+      <div className="ml-2">GitHub</div>
     </Link>
   );
 };

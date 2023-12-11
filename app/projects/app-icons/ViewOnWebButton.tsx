@@ -47,9 +47,10 @@ const ViewOnWebButton = ({url, fill}: {url: string; fill: string}) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
+      className="text-white rounded-xl border border-gray-500 p-2 m-4 w-fit flex flex-row justify-center items-center"
       aria-label="View on Web">
       <WebSiteSvg />
-      Website
+      <div className="ml-2">Website</div>
     </Link>
   );
 };
