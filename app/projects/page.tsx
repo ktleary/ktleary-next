@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Project from './components/Project';
 import {projectData} from './project-data';
 
-
 const GenericLinkIcon = ({className}: {className?: string}) => (
   <svg
     data-testid="button-genericlink"
@@ -13,38 +12,9 @@ const GenericLinkIcon = ({className}: {className?: string}) => (
   </svg>
 );
 
-/*
-===
-- example for how we will link dynamically to the project page
-- we have setup a folder called [project] in the projects folder (current folder)
-pwd && ls -la
-/Users/kleary/Documents/dev/explore/ktleary-next/app/projects
-drwxr-xr-x     - kleary 10 Dec 23:43 [project] // <-- this is the dynamic route folder
-drwxr-xr-x@    - kleary 10 Dec 16:31 app-icons
-drwxr-xr-x     - kleary 10 Dec 14:08 assets
-.rw-r--r--@ 4.9k kleary 10 Dec 14:13 buttons.tsx
-drwxr-xr-x     - kleary 10 Dec 23:23 components
-.rw-r--r--@  613 kleary 10 Dec 15:11 labels.tsx
-.rw-r--r--  1.0k kleary 10 Dec 17:40 page.tsx
-.rw-r--r--   11k kleary 10 Dec 17:33 project-data.ts
-===
-
-export default function PostList({ posts }) {
-  return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.id}>
-          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-        </li>
-      ))}
-    </ul>
-  )
-}
-*/
-
 const Projects = () => (
   <div className="bg-slate-800">
-    <div className="text-white text-center text-4xl font-bold p-4">
+    <div className="text-white text-center text-2xl font-bold p-4">
       Projects built with ❤️
     </div>
     <div className="flex flex-row justify-center items-center flex-wrap">

@@ -1,9 +1,8 @@
 import type {Metadata} from 'next';
 import {Inter} from 'next/font/google';
-import {usePathname} from 'next/navigation';
-import SiteIcon from './components/SiteIcon';
-import './globals.css';
 import Link from 'next/link';
+import TopNav from './components/TopNav';
+import './globals.css';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -17,27 +16,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <html lang="en">
       <body className="bg-white dark:bg-slate text-slate dark:text-white font-sans bg-white dark:bg-slate-800">
         <section className="flex flex-col">
-          <nav className="flex justify-between items-center px-4 py-4">
-            <Link href="/" className="text-2xl font-bold text-white">
-              <div className="flex justify-center">
-                <SiteIcon className="w-8 h-8 fill-slate-500 dark:fill-white" />
-              </div>
-            </Link>
-            <div className="flex">
-              <Link href="projects" className="px-2 py-2">
-                Projects
-              </Link>
-              <Link href="about" className="px-2 py-2">
-                About
-              </Link>
-              <Link href="code" className="px-2 py-2">
-                Code
-              </Link>
-              <Link href="blog" className="px-2 py-2">
-                Blog
-              </Link>
-            </div>
-          </nav>
+          <TopNav />
         </section>
 
         {children}
