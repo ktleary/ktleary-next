@@ -11,18 +11,14 @@ const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
 
   return (
     <div className="p-4  w-full h-full">
-      <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-col justify-center items-center rounded-xl border border-gray-800   m-4 w-full">
+      <div className="flex flex-row justify-center items-center w-full">
+        <div className="flex flex-col justify-center items-center rounded-xl border border-slate-200   m-4">
           {AppIcons[name]}
         </div>
       </div>
 
-      <div className="text-white text-center text-3xl mt-2 font-bold">
-        {name}
-      </div>
-      <div className="text-white text-center text-lg mt-1 font-normal">
-        {description}
-      </div>
+      <div className="text-center text-3xl mt-2 font-medium">{name}</div>
+      <div className="text-center text-lg mt-1 font-normal">{description}</div>
       <div className="flex flex-row justify-center items-center mt-2 pl-4">
         {siteUrl && <ViewOnWebButton url={siteUrl} fill="white" />}
         {repoUrl && <ViewOnGithubButton url={repoUrl} fill="white" />}
@@ -45,16 +41,12 @@ const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
         );
       })}
       {content && (
-        <div className="text-white text-lg font-normal max-w-xl mx-auto">
-          <div className="text-white text-center text-lg font-normal mt-3 mb-3">
-            About
-          </div>
+        <div className="text-lg font-normal max-w-xl mx-auto">
+          <div className="text-center text-lg  font-bold mt-3 mb-3">About</div>
           {content?.split('\n')?.map(paragraph => {
-            return (
-              <div className="text-white" key={paragraph}>
-                {paragraph}
-              </div>
-            );
+            return <div
+            className='text-lg font-normal mb-1 mt-1'
+            key={paragraph}>{paragraph}</div>;
           })}
         </div>
       )}

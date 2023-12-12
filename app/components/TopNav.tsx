@@ -15,7 +15,9 @@ const TopNav = () => {
 
   return (
     <nav className="flex justify-between items-center px-4 py-4">
-      <Link href="/" className="text-2xl font-bold text-cyan-700 dark:text-white">
+      <Link
+        href="/"
+        className="text-2xl font-bold text-cyan-700 dark:text-white">
         <div className="flex justify-center">
           {pathname === '/' ? (
             <SiteIcon className="w-8 h-8 fill-slate-500 dark:fill-white" />
@@ -39,18 +41,20 @@ const TopNav = () => {
           {/* {isMobileMenuOpen ? 'Close' : 'Menu'} */}
         </button>
       </div>
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex py-2">
         {/* Desktop menu links */}
-        <Link href="projects" className="px-2 py-2 text-sm">
+        <Link href="projects" className="px-2 py-2 text-sm font-medium">
           Projects
         </Link>
-        <Link href="about" className="px-2 py-2 text-sm">
+        <Link href="about" className="px-2 py-2 text-sm font-medium">
           About
         </Link>
-        <Link href="mailto:kevin@ktleary.com" className="px-2 py-2 text-sm">
+        <Link
+          href="mailto:kevin@ktleary.com"
+          className="px-2 py-2 text-sm font-medium">
           Contact
         </Link>
-        <Link href="blog" className="px-2 py-2 text-sm">
+        <Link href="blog" className="px-2 py-2 text-sm font-medium">
           Blog
         </Link>
       </div>

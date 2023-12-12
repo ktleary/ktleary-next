@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body className="bg-white dark:bg-slate text-slate dark:text-white font-sans bg-white dark:bg-slate-800">
+      <body className="bg-white dark:bg-slate text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-800">
         <section className="flex flex-col">
           <TopNav />
         </section>
