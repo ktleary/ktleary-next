@@ -13,8 +13,9 @@ const GenericLinkIcon = ({className}: {className?: string}) => (
 );
 
 const Projects = () => (
-  <div className="bg-slate-800">
-    <div className="text-white text-center text-2xl font-bold p-4">
+  <div>
+    <div
+      className="text-center text-2xl font-bold p-4">
       Projects built with ❤️
     </div>
     <div className="flex flex-row justify-center items-center flex-wrap">

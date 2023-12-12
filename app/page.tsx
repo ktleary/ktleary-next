@@ -1,18 +1,14 @@
 import React from 'react';
-import me from './assets/kevin-vietnam-hanging-plant.jpg';
-import Image from 'next/image';
-import Link from 'next/link';
-import GitHubButton from './components/buttons/GithubButton';
-import ProjectsButton from './components/buttons/ProjectsButton';
 import CodeButton from './components/buttons/CodeButton';
 import Me from './components/buttons/Me';
+import ProjectsButton from './components/buttons/ProjectsButton';
 
 const Title = () => (
-  <div className="text-4xl font-bold text-blue-300">Kevin Leary</div>
+  <div className="text-4xl font-semibold text-cyan-600">Kevin Leary</div>
 );
 
 const SubTitle = () => (
-  <div className="mt-4 text-2xl font-bold text-slate-500 dark:text-white">
+  <div className="mt-4 text-2xl font-medium text-slate-500 dark:text-white">
     Software Developer
   </div>
 );

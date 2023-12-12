@@ -15,7 +15,7 @@ const TopNav = () => {
 
   return (
     <nav className="flex justify-between items-center px-4 py-4">
-      <Link href="/" className="text-2xl font-bold text-white">
+      <Link href="/" className="text-2xl font-bold text-cyan-700 dark:text-white">
         <div className="flex justify-center">
           {pathname === '/' ? (
             <SiteIcon className="w-8 h-8 fill-slate-500 dark:fill-white" />

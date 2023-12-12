@@ -4,7 +4,7 @@ interface LabelProps {
 
 const LabelWrapper = ({label}: LabelProps) => {
   return (
-    <div className="flex flex-col justify-center items-center rounded-full bg-gray-600 h-5 px-2 text-white mr-2 text-xs">
+    <div className="flex flex-row justify-center items-center rounded-full bg-slate-500 dark:bg-gray-600 py-1 px-2 text-white mr-2 text-xs">
       {label}
     </div>
   );
