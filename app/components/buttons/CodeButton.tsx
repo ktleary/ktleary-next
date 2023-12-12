@@ -9,7 +9,7 @@ const CodeButton = () => (
       target="_blank"
       rel="noopener noreferrer">
       <button
-        className="bg-neutral-700 hover:bg-neutral-600 w-32 text-white font-bold  border-0 outline-none focus:outline-none rounded-full text-lg ml-4 flex justify-center items-center py-2"
+        className="bg-neutral-700 hover:bg-neutral-600 w-32 text-white font-bold  border-0 outline-none focus:outline-none rounded-full text-lg ml-2 flex justify-center items-center py-2"
         data-testid="enter-button">
         <GitHubButton className="inline-block w-6 h-6 mr-2" />
         Code

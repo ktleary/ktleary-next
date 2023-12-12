@@ -18,9 +18,7 @@ interface ButtonRowProps {
 }
 
 const ButtonRow = (props: ButtonRowProps) => (
-  <div
-    className="flex justify-center mt-8  flex-row items-center 
-  ">
+  <div className="flex justify-center mt-8  flex-row items-center">
     {props.children}
   </div>
 );
