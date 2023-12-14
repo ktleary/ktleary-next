@@ -27,7 +27,7 @@ file.isEmpty {Boolean}: true if front-matter is empty.
 }
 */
 
-export function getSortedPostsData() {
+function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map(fileName => {
@@ -46,6 +46,7 @@ export function getSortedPostsData() {
       title: matterResult.data.title,
       date: matterResult.data.date,
       description: matterResult.data.description,
+      content: matterResult.content,
     };
   });
 
@@ -59,3 +60,5 @@ export function getSortedPostsData() {
     }
   });
 }
+
+export default getSortedPostsData;

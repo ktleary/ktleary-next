@@ -1,4 +1,5 @@
-import {getSortedPostsData} from '../../lib/posts';
+import getSortedPostsData from '../../lib/posts';
+import Link from 'next/link';
 
 export default async function PostPage() {
   const posts = getSortedPostsData();
@@ -16,7 +17,7 @@ slug: microsoft-js
     return (
       <div className="flex flex-col mt-4">
         <div className="text-2xl font-bold">
-          <a href={`/blog/${slug}`}>{title}</a>
+          <Link href={`/blog/${slug}`}>{title}</Link>
         </div>
         <div className="text-lg font-normal text-gray-500 dark:text-gray-400">
           {description}
