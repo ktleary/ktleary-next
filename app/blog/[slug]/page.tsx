@@ -10,6 +10,7 @@ export async function generateStaticParams() {
 
 export default function BlogPage({params}: {params: {slug: string}}) {
   const post = getSortedPostsData().find(post => post.slug === params.slug);
+  console.log(post);
   if (!post) {
     return <div>Post not found</div>;
   }

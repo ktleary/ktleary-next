@@ -4,12 +4,12 @@ import Me from './components/buttons/Me';
 import ProjectsButton from './components/buttons/ProjectsButton';
 
 const Title = () => (
-  <div className="text-4xl font-semibold text-cyan-600">Kevin Leary</div>
+  <div className="text-4xl font-semibold dark:text-white-500">Kevin Leary</div>
 );
 
 const SubTitle = () => (
   <div className="mt-4 text-2xl font-medium text-slate-500 dark:text-white">
-    Software Developer
+    Full Stack Developer and FOSS Enthusiast
   </div>
 );
 
