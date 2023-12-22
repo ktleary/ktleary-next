@@ -3,15 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "devorig": "next dev",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@fec/remark-a11y-emoji": "^4.0.2",
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@next/mdx": "^14.0.4",
+    "@types/mdx": "^2.0.10",
+    "gray-matter": "^4.0.3",
     "next": "14.0.4",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-toc": "^9.0.0",
     "sharp": "^0.33.0"
   },
   "devDependencies": {

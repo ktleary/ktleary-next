@@ -2,14 +2,13 @@ import Link from 'next/link';
 
 const AboutPage = () => {
   return (
-    <div className="max-w-2xl mx-auto p-4">
+    <div className="max-w-2xl mx-auto p-4 pt-24">
       <h1 className="text-2xl font-bold mb-2">About</h1>
       <p className="mb-2">
-        I am a software developer focused on Javascript, with over 10 years of
-        experience working on the net. Much of this time has been spent working
-        with small companies serving large clients in the financial, healthcare
-        and e-commerce spaces. I am also a web-standards and open-source
-        enthusiast and am a member of the{' '}
+        With over 10 years of software development expertise, I help companies
+        in finance, healthcare, and e-commerce build web applications that solve
+        real problems. I&apos;m passionate about web standards and open-source,
+        actively contributing to the
         <Link href="https://www.w3.org/community/schemaorg/">
           W3C schema.org Community Group
         </Link>

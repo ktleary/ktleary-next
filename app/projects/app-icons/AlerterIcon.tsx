@@ -4,6 +4,10 @@ const AlerterSvg = ({className}: {className: string}) => (
   </svg>
 );
 
+/*
+there is a white border on the icon and the corners are bare -- need to have a consistent border around the icon
+*/
+
 const AlerterIcon = () => {
   return (
     <div className="flex flex-col justify-center items-center rounded-md bg-blue-600 h-18 w-18">
