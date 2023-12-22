@@ -41,7 +41,7 @@ function ButtonRow(props: ButtonRowProps) {
 
 function Home() {
   return (
-    <div className="mt-18 text-white text-opacity-87 mt-12 tracking-tighter text-center px-4 h-screen flex flex-col  ">
+    <div className="mt-18 text-white text-opacity-87 mt-24 tracking-tighter text-center px-4 h-screen flex flex-col  ">
       <Me />
       <Title />
       <SubTitle />

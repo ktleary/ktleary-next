@@ -30,7 +30,7 @@ slug: microsoft-js
   };
 
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center mt-24 p-8 max-w-3xl mx-auto">
       <h2 className="text-4xl font-bold">Blog</h2>
       <div className="text-lg font-normal mt-4">
         {posts.map(post => (

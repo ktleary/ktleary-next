@@ -1,5 +1,5 @@
 import ProjectCard from '../components/ProjectCard';
-import {projectData} from '../project-data';
+import { projectData } from '../project-data';
 
 const ProjectPage = ({params}: {params: {project: string}}) => {
   const currentProject: any = projectData.find(

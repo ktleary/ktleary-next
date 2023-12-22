@@ -7,10 +7,14 @@ import {ProjectDetails} from '../project-data';
 
 const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
   const {name, description, screenshots, content, siteUrl, repoUrl} =
-    projectDetails;
+    projectDetails || {};
+
+    if (!projectDetails) {
+      return null;
+    }
 
   return (
-    <div className="p-4  w-full h-full">
+    <div className="p-4  w-full h-full pt-24">
       <div className="flex flex-row justify-center items-center w-full">
         <div className="flex flex-col justify-center items-center rounded-xl ring-slate-100 bg-gray-900 m-4">
           <span className="rounded-xl border-slate-100 dark:border-slate-700">
@@ -36,7 +40,6 @@ const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
                 src={screenshot.src}
                 alt="screenshot"
                 width={screenshot.imageType === 'mobile' ? 200 : 600}
-                // imageType={screenshot.imageType}
               />
             </div>
           </Fragment>
