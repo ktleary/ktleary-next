@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://ktleary.com
-
-# Sitemaps
-Sitemap: https://ktleary.com/sitemap.xml
