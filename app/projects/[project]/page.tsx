@@ -1,13 +1,5 @@
-/*
-- here is the example of how to get the params from dynamic route
-
-export default function Page({ params }: { params: { slug: string } }) {
-  return <div>My Post: {params.slug}</div>
-}
-*/
-import {projectData} from '../project-data';
 import ProjectCard from '../components/ProjectCard';
-import {ProjectDetails} from '../project-data';
+import { projectData } from '../project-data';
 
 const ProjectPage = ({params}: {params: {project: string}}) => {
   const currentProject: any = projectData.find(

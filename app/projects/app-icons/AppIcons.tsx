@@ -9,14 +9,6 @@ import UnitedAarpIcon from './UnitedAarpIcon';
 import SqueeblesIcon from './Squeebles';
 import TailSpinIcon from './TailSpinIcon';
 
-// interface AppIcon {
-//   [key: string]: React.ReactNode;
-// }
-
-// interface AppIcons {
-//   [key: string]: AppIcon;
-// }
-
 const AppIcons: {[key: string]: React.ReactNode} = {
   twit2nit: <Twit2NitIcon />,
   'Mor Life': <MorIcon />,

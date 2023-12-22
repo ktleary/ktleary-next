@@ -14,7 +14,7 @@ const TopNav = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center px-4 py-4">
+    <nav className="flex justify-between items-center px-4 py-4 lg:px-8 lg:py-4 fixed top-0 left-0 w-full bg-white dark:bg-slate-800 z-10">
       <Link
         href="/"
         className="text-2xl font-bold text-cyan-700 dark:text-white">

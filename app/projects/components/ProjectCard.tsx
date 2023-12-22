@@ -7,13 +7,19 @@ import {ProjectDetails} from '../project-data';
 
 const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
   const {name, description, screenshots, content, siteUrl, repoUrl} =
-    projectDetails;
+    projectDetails || {};
+
+    if (!projectDetails) {
+      return null;
+    }
 
   return (
-    <div className="p-4  w-full h-full">
+    <div className="p-4  w-full h-full pt-24">
       <div className="flex flex-row justify-center items-center w-full">
-        <div className="flex flex-col justify-center items-center rounded-xl border border-slate-200   m-4">
-          {AppIcons[name]}
+        <div className="flex flex-col justify-center items-center rounded-xl ring-slate-100 bg-gray-900 m-4">
+          <span className="rounded-xl border-slate-100 dark:border-slate-700">
+            {AppIcons[name]}
+          </span>
         </div>
       </div>
 
@@ -34,7 +40,6 @@ const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
                 src={screenshot.src}
                 alt="screenshot"
                 width={screenshot.imageType === 'mobile' ? 200 : 600}
-                // imageType={screenshot.imageType}
               />
             </div>
           </Fragment>
@@ -44,9 +49,11 @@ const ProjectCard = ({projectDetails}: {projectDetails: ProjectDetails}) => {
         <div className="text-lg font-normal max-w-xl mx-auto">
           <div className="text-center text-lg  font-bold mt-3 mb-3">About</div>
           {content?.split('\n')?.map(paragraph => {
-            return <div
-            className='text-lg font-normal mb-1 mt-1'
-            key={paragraph}>{paragraph}</div>;
+            return (
+              <div className="text-lg font-normal mb-1 mt-1" key={paragraph}>
+                {paragraph}
+              </div>
+            );
           })}
         </div>
       )}
