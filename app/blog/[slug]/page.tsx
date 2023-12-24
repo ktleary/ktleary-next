@@ -26,7 +26,13 @@ interface Post {
   content: any;
 }
 
-export default function BlogPage({params}: {params: {slug: string}}) {
+interface BlogPageProps {
+  params: any;
+  searchParams?: any;
+}
+
+export default function BlogPage({params}: any) {
+  // {params: {slug: string}}) {
   const post: Post | undefined = getSortedPostsData().find(
     post => post.slug === params.slug,
   );
