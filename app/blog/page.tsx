@@ -3,14 +3,6 @@ import Link from 'next/link';
 
 export default async function PostPage() {
   const posts = getSortedPostsData();
-  /*
----
-title: Microsoft.js
-description: How one tech giant came to dominate the Javascript ecosystem
-date: Dec 14, 2019
-slug: microsoft-js
----
-*/
 
   const PostCard = ({post}: {post: any}) => {
     const {title, description, date, slug} = post || {};
