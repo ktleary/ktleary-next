@@ -43,10 +43,10 @@ const TopNav = () => {
       </div>
       <div className="hidden lg:flex py-2">
         {/* Desktop menu links */}
-        <Link href="projects" className="px-2 py-2 text-sm font-medium">
+        <Link href="/projects" className="px-2 py-2 text-sm font-medium">
           Projects
         </Link>
-        <Link href="about" className="px-2 py-2 text-sm font-medium">
+        <Link href="/about" className="px-2 py-2 text-sm font-medium">
           About
         </Link>
         <Link
@@ -54,7 +54,7 @@ const TopNav = () => {
           className="px-2 py-2 text-sm font-medium">
           Contact
         </Link>
-        <Link href="blog" className="px-2 py-2 text-sm font-medium">
+        <Link href="/blog" className="px-2 py-2 text-sm font-medium">
           Blog
         </Link>
       </div>
