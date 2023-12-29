@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import me from '../../assets/kevin-vietnam-hanging-plant.jpg';
+// import me from '../../assets/kevin-vietnam-hanging-plant.jpg';
+import me from '../../assets/kevin-comic.png';
 
 const Me = () => (
   <div className="flex justify-center mt-4">
