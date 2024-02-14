@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import {useState} from 'react';
-import Link from 'next/link';
-import SiteIcon from './SiteIcon';
-import {usePathname} from 'next/navigation';
+import { useState } from "react";
+import Link from "next/link";
+import SiteIcon from "./SiteIcon";
+import { usePathname } from "next/navigation";
 
 const TopNav = () => {
   const pathname = usePathname();
@@ -17,9 +17,10 @@ const TopNav = () => {
     <nav className="flex justify-between items-center px-4 py-4 lg:px-8 lg:py-4 fixed top-0 left-0 w-full bg-white dark:bg-slate-800 z-10">
       <Link
         href="/"
-        className="text-2xl font-bold text-cyan-700 dark:text-white">
+        className="text-2xl font-bold text-cyan-700 dark:text-white"
+      >
         <div className="flex justify-center">
-          {pathname === '/' ? (
+          {pathname === "/" ? (
             <SiteIcon className="w-8 h-8 fill-slate-500 dark:fill-white" />
           ) : (
             <div>Kevin Leary</div>
@@ -29,32 +30,44 @@ const TopNav = () => {
       <div className="flex lg:hidden">
         <button
           onClick={toggleMobileMenu}
-          className="px-2 py-2 text-sm text-white">
+          className="px-2 py-2 text-sm text-white"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
             viewBox="0 -960 960 960"
             className="fill-current text-black dark:text-slate-200"
-            width="24">
+            width="24"
+          >
             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
           </svg>
           {/* {isMobileMenuOpen ? 'Close' : 'Menu'} */}
         </button>
       </div>
       <div className="hidden lg:flex py-2">
-        {/* Desktop menu links */}
-        <Link href="/projects" className="px-2 py-2 text-sm font-medium">
+        {/* Desktop menu links  */}
+        <Link
+          href="/projects"
+          className="px-2 py-2 text-sm font-medium hover:text-cyan-700 dark:hover:text-cyan-400 transition"
+        >
           Projects
         </Link>
-        <Link href="/about" className="px-2 py-2 text-sm font-medium">
+        <Link
+          href="/about"
+          className="px-2 py-2 text-sm font-medium hover:text-cyan-700 dark:hover:text-cyan-400 transition"
+        >
           About
         </Link>
         <Link
           href="mailto:kevin@ktleary.com"
-          className="px-2 py-2 text-sm font-medium">
+          className="px-2 py-2 text-sm font-medium hover:text-cyan-700 dark:hover:text-cyan-400 transition"
+        >
           Contact
         </Link>
-        <Link href="/blog" className="px-2 py-2 text-sm font-medium">
+        <Link
+          href="/blog"
+          className="px-2 py-2 text-sm font-medium hover:text-cyan-700 dark:hover:text-cyan-400 transition"
+        >
           Blog
         </Link>
       </div>
@@ -63,25 +76,29 @@ const TopNav = () => {
           <Link
             href="/projects"
             className="block text-sm"
-            onClick={toggleMobileMenu}>
+            onClick={toggleMobileMenu}
+          >
             Projects
           </Link>
           <Link
             href="/about"
             className="block text-sm"
-            onClick={toggleMobileMenu}>
+            onClick={toggleMobileMenu}
+          >
             About
           </Link>
           <Link
             href="mailto:kevin@ktleary.com"
             className="block text-sm"
-            onClick={toggleMobileMenu}>
+            onClick={toggleMobileMenu}
+          >
             Contact
           </Link>
           <Link
             href="/blog"
             className="block text-sm"
-            onClick={toggleMobileMenu}>
+            onClick={toggleMobileMenu}
+          >
             Blog
           </Link>
         </div>

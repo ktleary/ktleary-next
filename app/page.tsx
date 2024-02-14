@@ -1,11 +1,11 @@
-import React from 'react';
-import CodeButton from './components/buttons/CodeButton';
-import Me from './components/buttons/Me';
-import ProjectsButton from './components/buttons/ProjectsButton';
+import React from "react";
+import CodeButton from "./components/buttons/CodeButton";
+import Me from "./components/buttons/Me";
+import ProjectsButton from "./components/buttons/ProjectsButton";
 
 function Title() {
   return (
-    <div className="text-4xl font-semibold dark:text-white text-slate-700">
+    <div className="text-4xl font-semibold dark:text-gray-200 text-slate-700 mt-16 text-center">
       Kevin Leary
     </div>
   );
@@ -13,8 +13,13 @@ function Title() {
 
 function SubTitle() {
   return (
-    <div className="mt-4 text-2xl font-medium text-slate-500 dark:text-white">
-      Software Developer & Privacy Advocate
+    <div
+      className="mt-4 text-lg font-normal text-center 
+    text-slate-500 dark:text-gray-400 max-w-lg mx-auto"
+    >
+      I&apos;m a fullstack developer, pragmatist, and team player. I currently
+      work as a Software Engineer and Founder at Broadcove, where I focus on
+      delivering high-quality Javascript and LLM-based solutions.
     </div>
   );
 }
@@ -33,8 +38,7 @@ function ButtonRow(props: ButtonRowProps) {
 
 function Home() {
   return (
-    <div className="mt-18 text-white text-opacity-87 mt-24 tracking-tighter text-center px-4 h-screen flex flex-col  ">
-      <Me />
+    <div className="mt-18 text-white text-opacity-87 mt-24 tracking-tighter px-4 h-screen flex flex-col  ">
       <Title />
       <SubTitle />
       <ButtonRow>
