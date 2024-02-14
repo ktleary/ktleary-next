@@ -5,7 +5,7 @@ import ProjectsButton from "./components/buttons/ProjectsButton";
 
 function Title() {
   return (
-    <div className="text-4xl font-semibold dark:text-white text-slate-700">
+    <div className="text-4xl font-semibold dark:text-white text-slate-700 mt-16">
       Kevin Leary
     </div>
   );
